@@ -1,15 +1,19 @@
 package gui;
 
+import java.net.URL;
 import java.util.Locale;
+import java.util.ResourceBundle;
 
 import gui.util.Alerts;
+import gui.util.Constraints;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class ViewController {
+public class ViewController implements Initializable{
 	
 	//Exemplo TextFields
 	@FXML // Para Associar com a tela
@@ -49,6 +53,19 @@ public class ViewController {
 	public void onBtTestAction() {
 		System.out.println("Click");
 		Alerts.showAlert("Alert Title", "Alert Header", "Hello", AlertType.INFORMATION);
+	}
+
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
+		//url -> Caminho da sua tela
+		// ResourceBundle -> Recursos que podem ser usados em sua implementação
+		
+		// Será executado na inicialização do Controlador
+		Constraints.setTextFieldDouble(txtNumber1);
+		Constraints.setTextFieldDouble(txtNumber2);
+		Constraints.setTextFieldMaxLength(txtNumber1, 5);
+		Constraints.setTextFieldMaxLength(txtNumber2, 5);
+		
 	}
 
 }
