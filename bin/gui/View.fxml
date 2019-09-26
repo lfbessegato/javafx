@@ -17,7 +17,7 @@
          </font>
       </Label>
       <TextField fx:id="txtNumber1" layoutX="25.0" layoutY="50.0" promptText="First Number" />
-      <TextField fx:id="txtNumber2" layoutX="25.0" layoutY="85.0" promptText="Second Number" />
+      <TextField fx:id="txtNumber2" layoutX="25.0" layoutY="85.0" promptText="Second Number" AnchorPane.leftAnchor="25.0" />
       <Button fx:id="btSum" layoutX="206.0" layoutY="50.0" mnemonicParsing="false" onAction="#onBtSumAction" text="Sum" />
       <Label layoutX="206.0" layoutY="89.0" text="Result =" />
       <Label fx:id="lblResult" layoutX="276.0" layoutY="89.0" />
